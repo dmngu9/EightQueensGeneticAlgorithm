@@ -8,11 +8,9 @@ import java.util.Random;
  */
 public class Population {
     private Chromosome[] chromosomes;
-    private int populationSize;
 
     public Population(int size) {
-        this.populationSize = size;
-        this.chromosomes = new Chromosome[populationSize];
+        this.chromosomes = new Chromosome[size];
         initializePopulation();
     }
 

@@ -20,7 +20,7 @@ public class Chromosome {
 
     public void generateChromosome () {
         Random random = new Random();
-        for (int i = 0; i < this.genes.length; i++) {
+        for (int i = 0; i < this.LENGTH; i++) {
             this.genes[i] = random.nextInt(this.LENGTH);
         }
     }
