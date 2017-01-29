@@ -8,9 +8,9 @@ import java.util.Random;
 public class GeneticAlgo {
     private Population population;
     private int populationSize;
-    public static final int ELITE_CHROMOSOME = 2;
+    public static final int ELITE_CHROMOSOME = 1;
     public static final int TOURNAMENT_SELECTION_SIZE = 5;
-    public static final double MUTATE_RATE = 0.01;
+    public static final double MUTATE_RATE = 0.1;
 
     public GeneticAlgo(int populationSize) {
         this.populationSize = populationSize;
@@ -20,10 +20,7 @@ public class GeneticAlgo {
     public void naturalSelection () {
         this.population.calculateFitness();
         this.population = generateNextGeneration();
-    }
-
-    public int getHighestFitness () {
-        return this.population.getChromosome(0).getFitness();
+        this.population.calculateFitness();
     }
 
     public Chromosome getFittestChromosome () {

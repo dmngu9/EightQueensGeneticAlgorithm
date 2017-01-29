@@ -27,8 +27,9 @@ public class Main {
         jFrame.add(board, BorderLayout.CENTER);
         jFrame.pack();
 
-        while (geneticAlgo.getHighestFitness() != 0) {
+        while (geneticAlgo.getFittestChromosome().getFitness() != 0) {
             geneticAlgo.naturalSelection();
+
             jFrame.remove(board);
             jFrame.revalidate();
             jFrame.repaint();
@@ -38,7 +39,7 @@ public class Main {
             jFrame.add(board,BorderLayout.CENTER);
             jFrame.pack();
             try {
-                Thread.sleep(100);
+                Thread.sleep(10);
             } catch (Exception e) {
                 // Do nothing
             }

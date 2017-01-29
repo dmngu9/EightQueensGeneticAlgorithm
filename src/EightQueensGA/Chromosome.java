@@ -34,7 +34,7 @@ public class Chromosome {
     }
 
     public int getFitness() {
-        return fitness;
+        return this.fitness;
     }
 
     public int getGenes (int index) {
